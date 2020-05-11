@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/add', 'ubuntuController@addAccount')->name('addAccount');
+Route::post('/add', 'ubuntuController@addAccountStore')->name('addAccountSubmit');
